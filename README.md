@@ -1,10 +1,10 @@
 # Agent ECS Fargate Deployment (WIP)
 
-**THIS IS A WORK IN PROGRESS, AS A POTENTIAL BONUS TO THE 2018 APM WORKSHOP, DEPLOYING AN AGENT IN ECS / FARGATE**
+**THIS IS A WORK IN PROGRESS, AS A POTENTIAL BONUS TO THE [2018 APM WORKSHOP](https://github.com/burningion/dash-apm-workshop), DEPLOYING AN AGENT IN ECS / FARGATE**
 
 This tutorial assumes you've never set up a cluster on ECS Fargate before. It also comes with the caveat that the way we deploy our Flask servers is wrong. 
 
-You should be using something like gunicorn to run Python in production on your servers. If I have enough time, I'll fix this in the lesson here.
+You should be using something like [gunicorn](http://gunicorn.org/) to run Python in production on your servers. If I have enough time, I'll fix this in the lesson here.
 
 First, we need to install the [AWS cli](https://aws.amazon.com/cli/) and the [ECS cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 
