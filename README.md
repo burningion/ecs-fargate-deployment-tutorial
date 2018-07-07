@@ -192,6 +192,7 @@ Remember, you can see everything in the AWS console, and find the IP address of 
 
 Once you've got your IP address, try hitting the API. You should see both your containers and the traces we built from the workshop in Datadog:
 
+![Datadog Traces](https://github.com/burningion/ecs-fargate-deployment-tutorial/raw/master/images/traces.png)
 
 To stop our containers, we just:
 
