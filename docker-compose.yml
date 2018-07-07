@@ -1,0 +1,29 @@
+version: '3'
+services:
+  redis:
+    image: "redis:4.0.10-alpine"
+  web:
+    image: "<DOCKERIMAGEWEBUILDNEXT>"
+    environment:
+      - FLASK_APP=api.py
+    command: flask run --port=80 --host=0.0.0.0
+    ports:
+      - "80:80"
+    depends_on:
+      - agent
+      - redis
+      - thinker
+  thinker:
+    image: "<DOCKERIMAGEWEBUILDNEXT>"
+    environment:
+    - FLASK_APP=thinker.py
+    command: flask run --port=5050 --host=0.0.0.0
+    depends_on:
+      - agent
+      - redis
+  agent:
+    image: "datadog/agent:6.2.1"
+    environment:
+      - DD_API_KEY=<YOURDATADOGKEY>
+      - DD_APM_ENABLED=true
+      - ECS_FARGATE=true
