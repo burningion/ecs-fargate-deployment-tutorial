@@ -180,6 +180,8 @@ services:
       - ECS_FARGATE=true
 ```
 
+Be sure to add your Datadog API key. This will let us see our container infrastructure, along with the traces we set up.
+
 Bring it all up from the command line:
 
 ```bash
@@ -187,6 +189,9 @@ $ ecs-cli compose --project-name apm-workshop service up --cluster-config apm-wo
 ```
 
 Remember, you can see everything in the AWS console, and find the IP address of our `task`, running there. Send requests to that IP, and make sure everything works.
+
+Once you've got your IP address, try hitting the API. You should see both your containers and the traces we built from the workshop in Datadog:
+
 
 To stop our containers, we just:
 
